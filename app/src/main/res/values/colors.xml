@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="primary">#009688</color>
+    <color name="primary_v">#5FA785</color>
+    <color name="title">#184731</color>
+    <color name="gray">#F2F4F8</color>
+
+    <color name="accent">#040B33</color>
+    <color name="primaryPrev">#2D9363</color>
+    <color name="home_bg">#C1E1FC</color>
+    <color name="nav_bg">#186EB4</color>
+
+    <color name="secondary_v">#465F29</color>
+    <color name="secondary_variant">#1C5C3E</color>
+    <color name="bg">#7AC4A0</color>
+    <color name="bg2">#7ECFA9</color>
+    <color name="bg3">#34BD7C</color>
+    <color name="fuel">#FF5722</color>
+    <color name="make">#076996</color>
+
+    <color name="neutral">#E9ECEC</color>
+    <color name="neutral2">#DDE5EC</color>
+
+
+    <color name="bg_list">#B6F0D4</color>
+    <color name="bg_info">#98D5B8</color>
+
+    <color name="detail">#FD105F</color>
+
+    <color name="icon_selected">#13CEBC</color>
+    <color name="icon_unselected">#08B866</color>
+
+    <color name="text_selected">#0F4A65</color>
+    <color name="text_unselected">#AA030505</color>
+</resources>

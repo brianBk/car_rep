@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="select_items"
+    android:background="@color/gray"
+    android:maxLines="1"
+    android:padding="@dimen/car_repo_padding"
+    android:text=""
+    android:ellipsize="end"
+    android:textAppearance="?attr/textAppearanceSubtitle1">
+
+</TextView>

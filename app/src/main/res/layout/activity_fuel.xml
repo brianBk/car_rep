@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/neutral2">
+
+        <TextView
+            android:id="@+id/fuel_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/car_repo_fuel"
+            android:textColor="@color/title"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/fuel_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/fuel_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/submitBtn">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/neutral"
+                tools:context=".FuelActivity">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fueling_date_wrapper"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/car_repo_margin"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/date_fueled"
+                    app:endIconDrawable="@drawable/cal_icon"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fueling_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/car_type_wrapper"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/car_repo_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fueling_date_wrapper">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/car_type_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/select_model"
+                        android:inputType="none"
+                        android:padding="@dimen/car_repo_padding"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fuelQuantityWrapper"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/car_repo_margin"
+                    android:hint="@string/fuel_qty"
+                    app:endIconDrawable="@drawable/fuel_icon"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/car_type_wrapper">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fuelQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:text="@string/default_quantity" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fuelTypeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/car_repo_margin"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:text="@string/fuel_type"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fuelQuantityWrapper" />
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/car_repo_margin"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fuelTypeText">
+
+                    <RadioButton
+                        android:id="@+id/petrol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/car_repo_margin"
+                        android:layout_marginEnd="@dimen/margin2"
+                        android:text="@string/gas"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/diesel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/diesel"
+                        android:textSize="15sp" />
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/unit_price_wrapper"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/car_repo_margin"
+                    android:hint="@string/unit_price"
+                    app:endIconDrawable="@drawable/unit_icon"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/radioGroup">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/unit_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="@dimen/car_repo_padding"
+                        android:text=""
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/total_amount_wrapper"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/car_repo_margin"
+                    android:hint="@string/total_amount"
+                    app:endIconDrawable="@drawable/amount_icon"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/unit_price_wrapper">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/total_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="@dimen/car_repo_padding"
+                        android:text=""
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginbtn"
+            android:text="Submit"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/fuel_scroll"
+            app:layout_constraintBottom_toTopOf="@id/fuel_nav_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/fuel_nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_view_height"
+            android:background="@color/nav_bg"
+            app:itemIconSize="@dimen/icon_size"
+            app:itemIconTint="@drawable/icon_selector"
+            app:itemPaddingBottom="2dp"
+            app:itemPaddingTop="4dp"
+            app:itemTextColor="@drawable/text_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

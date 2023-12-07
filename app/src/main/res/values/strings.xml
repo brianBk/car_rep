@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">carRepo</string>
+    <string name="car_repo_title">Welcome to carRepo Inc</string>
+    <string name="plates">Number Plate</string>
+    <string name="car_repo_description"> ~ Your No. 1 car Registration Repository ~</string>
+    <string name="car_make">Car Make</string>
+    <string name="car_model">Car Model</string>
+    <string name="car_owner_name">Owner\'s Name</string>
+    <string name="car_tare">Car Tare(in tonnes)</string>
+    <string name="car_weight">Car Weight (in tonnes)</string>
+    <string name="date_purchased">Date Purchased</string>
+    <string name="submit_button">Submit Registration</string>
+    <string name="date_fueled">Date Fueled</string>
+    <string name="select_model">select your car type</string>
+    <string name="gas">Petrol</string>
+    <string name="diesel">Diesel</string>
+    <string name="unit_price">Price per litre</string>
+    <string name="total_amount">Total amount (Kshs)</string>
+    <string name="default_quantity">1</string>
+    <string name="fuel_qty">Fuel Quantity (Ltrs)</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="car_repo_entry">Please Enter Car Info Below</string>
+    <string name="car_repo_summary">Car Details Summary: </string>
+    <string name="car_repo_fuel">Fuel Usage: </string>
+
+    <string-array name="car_models">
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Toyota</item>
+        <item>Ford</item>
+        <item>Mercedes</item>
+        <item>Volkswagen</item>
+        <item>Rolls Royce</item>
+        <item>Lamborghini</item>
+        <item>Porsche</item>
+        <item>Pagani</item>
+        <item>Ferrari</item>
+        <item>Mclaren</item>
+        <item>Bugatti</item>
+        <item>Maserati</item>
+    </string-array>
+
+
+    <string-array name="car_make_array">
+        <item>Sedan/Saloon</item>
+        <item>SUV</item>
+        <item>Truck</item>
+        <item>Pick-up Truck</item>
+        <item>Sport Car/Muscle</item>
+        <item>Bus</item>
+        <item>Van</item>
+        <item>Mini-Bus</item>
+        <item>Bike</item>
+        <item>Touring Wagon</item>
+        <item>RV</item>
+        <item>Mini-SUV</item>
+        <item>Trailer-Truck</item>
+    </string-array>
+
+</resources>
